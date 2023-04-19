@@ -43,7 +43,7 @@ function time() {
                 hours = Math.floor(hours % 24);
             }
         }
-        result.innerText = day + ' дней ' + hours + ' часов ' + min + ' минут ' + second + ' секунд ';
+        result.innerText = day + ' дн. ' + hours + ' ч. ' + min + ' мин. ' + second + ' сек. ';
     }
 
     function reset() {
