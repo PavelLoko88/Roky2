@@ -13,7 +13,6 @@ function popup() {
 }
 popup();
 
-
 // TIME
 function time() {
     let time = document.getElementById('input-time');
@@ -56,3 +55,8 @@ function time() {
     resetbtn.addEventListener("click", reset);
 }
 time();
+
+// VALIDATE
+function validate(){
+    
+}

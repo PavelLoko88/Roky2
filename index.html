@@ -15,11 +15,11 @@
         <h1 class="css-title">Задание CSS</h1>
         <!-- POPUP -->
         <div class="popup-block">
-            <button class="popup-btn open" id="btn-open">Открыть popup</button>
+            <button class="btn open" id="btn-open">Открыть popup</button>
             <div class="popup" id="block">
                 <div class="popup-content">
                     <p class="popup-text">Привет</p>
-                    <button class="popup-btn close " id="btn-close">Закрыть</button>
+                    <button class="btn close " id="btn-close">Закрыть</button>
                 </div>
             </div>
         </div>
@@ -39,11 +39,15 @@
                 <input type="number" placeholder="Введите кол-во секунд" id="input-time" class="input input-time">
                 <button class="compile-time" id="compile">Преобразовать</button>
             </div>
-
             <p class="input-result" id="result"></p>
-
-
             <input type="reset" class="input reset" id="reset">
+        </div>
+
+
+        <!-- VALIDATE -->
+        <div class="validate-block">
+            <input type="text" class="input input-valid" id="input-valid" placeholder="Проверить на валидацию">
+            <button class="btn" id="btn-valid">Проверить</button>
         </div>
     </div>
 
