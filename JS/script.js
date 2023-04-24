@@ -57,6 +57,33 @@ function time() {
 time();
 
 // VALIDATE
-function validate(){
-    
+function validate() {
+    let validinput = document.getElementById('input-valid');
+    let validbtn = document.getElementById('btn-valid');
+
+    if (validinput.value == '') {
+        validbtn.classList.remove("active");
+        validbtn.classList.add("no-active");
+        console.log('Пусто!');
+    } else {
+        if (validinput.value.length < 6) {
+            validbtn.classList.remove("active");
+            validbtn.classList.add("no-active");
+            console.log('Больше символов!');
+        } else {
+            for (let i = 0; i < validinput.value.length; i++) {
+                if (/^(0|[0-9]\d*)$/.test(validinput.value[i]) == true) {
+                    validbtn.classList.remove("active");
+                    validbtn.classList.add("no-active");
+                    console.log('Цифры нельзя!');
+                    break;
+                } else {
+                    validbtn.classList.remove("no-active");
+                    validbtn.classList.add("active");
+                }
+            }
+        }
+    }
+    validbtn.addEventListener("click", validate);
 }
+validate();

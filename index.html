@@ -36,18 +36,20 @@
         <!-- TIME -->
         <div class="time-block">
             <div class="working-area">
-                <input type="number" placeholder="Введите кол-во секунд" id="input-time" class="input input-time">
-                <button class="compile-time" id="compile">Преобразовать</button>
+                <input type="number" placeholder="Введите кол-во секунд" id="input-time" class="input">
+                <button class=" btn" id="compile">Преобразовать</button>
             </div>
             <p class="input-result" id="result"></p>
-            <input type="reset" class="input reset" id="reset">
+            <button type="reset" class="btn " id="reset">Сбросить</button>
         </div>
 
 
         <!-- VALIDATE -->
-        <div class="validate-block">
-            <input type="text" class="input input-valid" id="input-valid" placeholder="Проверить на валидацию">
-            <button class="btn" id="btn-valid">Проверить</button>
+        <div class="validate-blocks">
+            <h2 class="valid-title">Больше 6 симвл. и без цифр</h2>
+            <div class="valid-block">
+                <input type="text" class="input " id="input-valid" placeholder="Валидация">
+                <button class="btn no-active" id="btn-valid">Отправить</button></div>
         </div>
     </div>
 
