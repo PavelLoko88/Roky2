@@ -60,26 +60,27 @@ time();
 function validate() {
     let validinput = document.getElementById('input-valid');
     let validbtn = document.getElementById('btn-valid');
-
+    let help = document.getElementById('help');
     if (validinput.value == '') {
         validbtn.classList.remove("active");
         validbtn.classList.add("no-active");
-        console.log('Пусто!');
+        help.innerText = 'Пустое поле';
     } else {
         if (validinput.value.length < 6) {
             validbtn.classList.remove("active");
             validbtn.classList.add("no-active");
-            console.log('Больше символов!');
+            help.innerText = 'Нужно мин. 6 символов';
         } else {
             for (let i = 0; i < validinput.value.length; i++) {
                 if (/^(0|[0-9]\d*)$/.test(validinput.value[i]) == true) {
                     validbtn.classList.remove("active");
                     validbtn.classList.add("no-active");
-                    console.log('Цифры нельзя!');
+                    help.innerText = 'Цифры нельзя';
                     break;
                 } else {
                     validbtn.classList.remove("no-active");
                     validbtn.classList.add("active");
+                    help.innerText = '';
                 }
             }
         }
