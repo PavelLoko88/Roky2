@@ -89,3 +89,20 @@ function validate() {
     validbtn.addEventListener("click", validate);
 }
 validate();
+
+// ADAPTIVE-INPUT
+function adaptiveInput() {
+    let input = document.getElementById('input-adaptive');
+    input.addEventListener('input', autoresize);
+
+    function autoresize() {
+        let size = input.scrollWidth
+        input.style.width = size + 'px';
+        input.style.transition = "none";
+        if (input.value == '') {
+            input.style.width = 175 + 'px';
+        }
+    }
+
+}
+adaptiveInput();
