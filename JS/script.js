@@ -86,7 +86,7 @@ function validate() {
             }
         }
     }
-    validbtn.addEventListener("click", validate);
+    validinput.addEventListener("keydown", validate);
 }
 validate();
 
