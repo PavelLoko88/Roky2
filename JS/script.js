@@ -21,7 +21,7 @@ function time() {
 
     function startTime() {
         let result = document.getElementById('result');
-        result.innerText = 'Тут будет конечный результат';
+        result.innerText = 'Результат';
     }
 
     function compileTime() {
@@ -69,18 +69,19 @@ function validate() {
         if (validinput.value.length < 6) {
             validbtn.classList.remove("active");
             validbtn.classList.add("no-active");
-            help.innerText = 'Нужно мин. 6 символов';
+            help.innerText = 'Нужно больше 6 символов';
         } else {
             for (let i = 0; i < validinput.value.length; i++) {
                 if (/^(0|[0-9]\d*)$/.test(validinput.value[i]) == true) {
                     validbtn.classList.remove("active");
                     validbtn.classList.add("no-active");
-                    help.innerText = 'Цифры нельзя';
+                    help.innerText = 'Поле должно быть без цифр';
                     break;
                 } else {
                     validbtn.classList.remove("no-active");
                     validbtn.classList.add("active");
-                    help.innerText = '';
+                    help.innerText = 'Проверка прошла успешно';
+
                 }
             }
         }
